@@ -95,11 +95,11 @@ impl ClientSender{
         }
     }
 
-    pub async fn get_buff_len(&self) -> usize{
+    pub fn get_buff_len(&self) -> usize{
         self.buffer.len()
     }
 
-    pub async fn add_buff(&mut self, buf:&[u8] ) {
+    pub async fn add_buff(&mut self, buf:&[u8]) {
         if buf.len() == 0{
             return
         }
